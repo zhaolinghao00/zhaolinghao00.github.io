@@ -19,17 +19,7 @@ end
 &lt;/p>
 $$
 P_{dyn}=C_LV_{DD}^2f_{0\rightarrow1}
-$$&lt;ul>
-&lt;li>
-&lt;p>$C_L$负载电容&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>$V_{DD}$电源电压&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>$f_{0\rightarrow1}$开关活动性&lt;/p>
-&lt;/li>
-&lt;/ul>
+$$&lt;p>CL负载电容，VDD电源电压、f 0-&amp;gt;1开关活动性，(为啥hugo就不能支持行内公式)&lt;/p>
 &lt;p>工艺也会影响晶体管尺寸和互连电容从而改变负载电容&lt;/p></description></item><item><title>面经（1）</title><link>https://zhaolinghao00.github.io/post/2025/08/16/%E9%9D%A2%E7%BB%8F1/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/16/%E9%9D%A2%E7%BB%8F1/</guid><description>&lt;p>最近投递了三四十家公司，做了十几份测评，面试两家公司，然后和朋友室友交流了一些面试过程中遇到的问题，记录一下需要强化的内容。&lt;/p>
 &lt;hr>
 &lt;h2 id="一面试">一、面试&lt;/h2>

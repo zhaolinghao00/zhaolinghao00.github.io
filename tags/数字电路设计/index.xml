@@ -19,15 +19,5 @@ end
 &lt;/p>
 $$
 P_{dyn}=C_LV_{DD}^2f_{0\rightarrow1}
-$$&lt;ul>
-&lt;li>
-&lt;p>$C_L$负载电容&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>$V_{DD}$电源电压&lt;/p>
-&lt;/li>
-&lt;li>
-&lt;p>$f_{0\rightarrow1}$开关活动性&lt;/p>
-&lt;/li>
-&lt;/ul>
+$$&lt;p>CL负载电容，VDD电源电压、f 0-&amp;gt;1开关活动性，(为啥hugo就不能支持行内公式)&lt;/p>
 &lt;p>工艺也会影响晶体管尺寸和互连电容从而改变负载电容&lt;/p></description></item></channel></rss>
