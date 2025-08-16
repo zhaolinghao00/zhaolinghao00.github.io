@@ -1,0 +1,11 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>刷题（1） | 0号树洞</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css></head><body><nav><ul class=menu><li><a href=/>主页</a></li><li><a href=/about/>关于</a></li><li><a href=/categories/>分类</a></li><li><a href=/tags/>标签</a></li><li><a href=/index.xml>Subscribe</a></li></ul><hr></nav><div class=article-meta><h1><span class=title>刷题（1）</span></h1><h2 class=date>2025/08/16</h2></div><main><p>马上就要中期，即便如此也要坚持刷题，应对笔试。</p><h3 id=可以正确表述以下fork-join_any语句的是>可以正确表述以下fork join_any语句的是？</h3><pre><code class=language-systemverilog>begin
+    fork 
+        进程a;
+        进程b;
+        进程c;
+    join_any
+    	进程d;
+end
+</code></pre><blockquote><p>fork join：必须等待进程1，进程2，进程3全部执行完毕之后，进程4才可以执行。</p><p>fork join_any：必须等待进程1，进程2，进程3<strong>任何</strong>一个执行完毕后，进程4才可以执行</p><p>fork join_none：进程4是否执行不依赖于进程1，进程2，进程3，他们可以同步执行。</p></blockquote><p>所以这里答案是进程abc同时启动，有一个进程结束，进程d就可以启动。</p><h3 id=cmos设计中动态功耗与什么有关>CMOS设计中动态功耗与什么有关</h3><p>动态功耗用下式表示</p>$$
+P_{dyn}=C_LV_{DD}^2f_{0\rightarrow1}
+$$<ul><li><p>$C_L$负载电容</p></li><li><p>$V_{DD}$电源电压</p></li><li><p>$f_{0\rightarrow1}$开关活动性</p></li></ul><p>工艺也会影响晶体管尺寸和互连电容从而改变负载电容</p></main><footer><link rel=stylesheet href=//cdn.jsdelivr.net/npm/katex/dist/katex.min.css><script src=//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js defer></script><script src=//cdn.jsdelivr.net/npm/katex/dist/katex.min.js defer></script><script src=//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js defer></script><script src=//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js defer></script><script src=//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js defer></script><hr>© <a href=https://zhaolinghao00.github.io>linghao</a> 2025 &ndash; 2025 | <a href=https://github.com/zhaolinghao00>Github</a></footer></body></html>

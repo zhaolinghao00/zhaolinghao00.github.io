@@ -1,19 +1,92 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on 0号树洞</title><link>https://zhaolinghao00.github.io/</link><description>Recent content in Home on 0号树洞</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 15 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaolinghao00.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>成瘾、学习、博弈、爱</title><link>https://zhaolinghao00.github.io/post/2025/08/15/%E6%88%90%E7%98%BE%E5%AD%A6%E4%B9%A0%E5%8D%9A%E5%BC%88%E7%88%B1/</link><pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/15/%E6%88%90%E7%98%BE%E5%AD%A6%E4%B9%A0%E5%8D%9A%E5%BC%88%E7%88%B1/</guid><description>&lt;blockquote>
-&lt;p>bilibili - “大学不开的课程之：成瘾、学习、博弈与爱”&lt;/p>&lt;/blockquote>
-&lt;hr>
-&lt;h3 id="成瘾性问题">成瘾性问题&lt;/h3>
-&lt;p>过去也有成瘾性问题，比如鸦片，现在的电子产品内在的算法让成瘾变得“科学、现代”，过去解决成瘾性问题会通过&lt;del>鸡汤、话疗、口号&lt;/del>，现在则更应该从&lt;strong>脑科学&lt;/strong>和&lt;strong>神经科学&lt;/strong>角度出发，从内解决问题。&lt;/p>
-&lt;h4 id="成瘾的机制---多巴胺皮质醇内啡肽血清素与催产素">成瘾的机制 - 多巴胺、皮质醇、内啡肽、血清素与催产素。&lt;/h4>
-&lt;h5 id="1-多巴胺">1. 多巴胺&lt;/h5>
-&lt;p>红点；期待社会认可：点赞、互动；自动播放与刷新；新颖性（缺乏见贤思齐）；害怕离群与社交控制；社交的相互性；&lt;strong>可变的奖励模式&lt;/strong>：短视频、开箱、菠菜。&lt;/p>
-&lt;p>结果就是：渴望、时失控、强迫性、不计后果&lt;/p>
-&lt;h5 id="2-皮质醇压力">2. 皮质醇（压力）&lt;/h5>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Home on 0号树洞</title><link>https://zhaolinghao00.github.io/</link><description>Recent content in Home on 0号树洞</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 16 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaolinghao00.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>刷题（1）</title><link>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</guid><description>&lt;p>马上就要中期，即便如此也要坚持刷题，应对笔试。&lt;/p>
+&lt;h3 id="可以正确表述以下fork-join_any语句的是">可以正确表述以下fork join_any语句的是？&lt;/h3>
+&lt;pre>&lt;code class="language-systemverilog">begin
+ fork 
+ 进程a;
+ 进程b;
+ 进程c;
+ join_any
+ 	进程d;
+end
+&lt;/code>&lt;/pre>
 &lt;blockquote>
-&lt;p>[!note]&lt;/p>
+&lt;p>fork join：必须等待进程1，进程2，进程3全部执行完毕之后，进程4才可以执行。&lt;/p>
+&lt;p>fork join_any：必须等待进程1，进程2，进程3&lt;strong>任何&lt;/strong>一个执行完毕后，进程4才可以执行&lt;/p>
+&lt;p>fork join_none：进程4是否执行不依赖于进程1，进程2，进程3，他们可以同步执行。&lt;/p>&lt;/blockquote>
+&lt;p>所以这里答案是进程abc同时启动，有一个进程结束，进程d就可以启动。&lt;/p>
+&lt;h3 id="cmos设计中动态功耗与什么有关">CMOS设计中动态功耗与什么有关&lt;/h3>
+&lt;p>动态功耗用下式表示
+&lt;/p>
+$$
+P_{dyn}=C_LV_{DD}^2f_{0\rightarrow1}
+$$&lt;ul>
+&lt;li>
+&lt;p>$C_L$负载电容&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>$V_{DD}$电源电压&lt;/p>
+&lt;/li>
+&lt;li>
+&lt;p>$f_{0\rightarrow1}$开关活动性&lt;/p>
+&lt;/li>
+&lt;/ul>
+&lt;p>工艺也会影响晶体管尺寸和互连电容从而改变负载电容&lt;/p></description></item><item><title>面经（1）</title><link>https://zhaolinghao00.github.io/post/2025/08/16/%E9%9D%A2%E7%BB%8F1/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/16/%E9%9D%A2%E7%BB%8F1/</guid><description>&lt;p>最近投递了三四十家公司，做了十几份测评，面试两家公司，然后和朋友室友交流了一些面试过程中遇到的问题，记录一下需要强化的内容。&lt;/p>
+&lt;hr>
+&lt;h2 id="一面试">一、面试&lt;/h2>
+&lt;p>面试考察三方面：专业性、人际关系、稳定性&lt;/p>
+&lt;p>&lt;strong>专业性&lt;/strong>就是技术面，考察对专业知识、问题解决、抗压等能力是否符合岗位要求。&lt;/p>
+&lt;p>&lt;strong>人际关系&lt;/strong>往往是对同事关系、团队协作和谐的评估。&lt;/p>
+&lt;p>&lt;strong>稳定性&lt;/strong>之前问过女友、工作地与居住地、通勤。&lt;/p>
+&lt;hr>
+&lt;p>简历是HR或者面试官了解面试者的第一步，简历这部分一般与面试的内容重复度很高，放在一起讲&lt;/p>
+&lt;p>hr不了解相关技术，他希望看到的是和岗位要求匹配的技能和项目，这要求简历与岗位描述相呼应，也就是说不能跨岗投递。&lt;/p>
+&lt;p>专业面试官一方面是和公司业务有关联的项目经历、技能优势，其次也考察个人的探索、创造能力。面试官希望看到的是你在项目中不止考虑实现方案，更考虑相关的优化问题。印象最深的是被问到：&lt;/p>
+&lt;h3 id="有什么体现你的学术能力解决问题的能力的事情吗">有什么体现你的&lt;strong>学术能力&lt;/strong>，&lt;strong>解决问题&lt;/strong>的能力的事情吗？&lt;/h3>
+&lt;p>当时的回答简直一塌糊涂，说了一堆为了做什么而去学了什么的东西。感觉侧重点并没有放在解决问题上。最近看到一篇关于米哈游前员工丁盛豪的文章，他在米哈游离职后，创办自己的AI游戏公司，其中有两个他在米哈游任职期间的故事，这或许是面试官乐于听到的：&lt;/p>
+&lt;p>第一个是关于他在进行语音训练集录制的时候，房间的底噪无法过滤，需要购买几千的专业设备，而他在研究后发现只需要计算低频驻波的大小并且找到正好匹配的泡沫就能搞定，最终只花费了十几块购买EVA泡沫，就将环境的底噪降低了几十dB。&lt;/p>
+&lt;p>第二个是他对于云延迟游戏方案的延迟优化。当时的云游戏使用的开源框架存在掉帧、延迟大、不跟手的问题，大厂当时通过在芯片中设计专门的延迟计算单元，而丁的延迟测量方式则是通过索尼手机的高速摄影，仅仅花费不到200元。&lt;/p>
+&lt;p>要论学术能力或许都有点虚了，但这两个故事很好的体现了解决问题的能力。&lt;/p>
+&lt;h3 id="其他问题">其他问题&lt;/h3>
+&lt;h4 id="1-是否有参与产品化的项目">1. 是否有参与产品化的项目？&lt;/h4>
+&lt;p>这个其实是有的，但是当时脑抽了说没有，以纵向课题为主，有套从别人公司买来的产品成熟度挺高的&lt;/p>
+&lt;h4 id="2-想去哪些公司为什么想去这些公司">2. 想去哪些公司，为什么想去这些公司？&lt;/h4>
+&lt;p>这个说的时候只记得自己投了的公司，下一个问题直接懵了，然后开始瞎说。&lt;/p>
+&lt;p>有空让AI补充几个例子&lt;/p>
+&lt;h4 id="3-如果遇到矛盾会怎么解决">3. 如果遇到矛盾，会怎么解决&lt;/h4>
+&lt;p>冷静避免情绪化、主动沟通换位思考、聚焦共同目标、适时求助、反思改进&lt;/p>
+&lt;p>健康的冲突处理能够促进团队的创新和信任，通过积极沟通协作，矛盾范围可能成为优化工作方式的契机。&lt;/p>
+&lt;p>&lt;a href="https://www.zhihu.com/question/12742726879">参考&lt;/a>&lt;/p>
+&lt;h4 id="4-期望薪资">4. 期望薪资&lt;/h4>
+&lt;p>经济差，没敢往高了说，所以说了个自己觉得能接受的。希望能在排序上高点。&lt;/p>
+&lt;h4 id="5职业规划">5.职业规划&lt;/h4>
+&lt;p>这个问题出现在技术面中，当时回答的比较笼统，以下贴一个我觉得不错的&lt;/p>
+&lt;p>“嗯，好的，我现在还是个年轻人，还没有正式开始社会教育，所以您的问题我可能回答不好，但是在我工作的头几年，虽然我不知道我未来发展的会怎样，但是我希望尽自己最大努力配得上我的收入，还有契合我的职业精神。更加希望在工作当中获得成长，并且能在几年内详尽的做好我的职业规划。”&lt;/p>
+&lt;p>上面的回答也是老一辈的工作状况，工作机会难得，从底层做起，因此更加珍惜工作的机会，并且社会发展快，没时间去“想”，做比想更强，做总比不做强。&lt;/p>
+&lt;h4 id="反问">反问&lt;/h4>
+&lt;p>团队氛围和工作环境、晋升考核、部门业务&lt;/p>
+&lt;h2 id="二测评">二、测评&lt;/h2>
+&lt;p>现在做了十几份测评，主要是阅读理解、图表理解、图形推理、性格测试。阅读裂解和图表理解都没啥好说的，图形推理需要去学习考公的图形推理（图形推理据说来自于智商测试，但我认为这个与智商并没有关系）&lt;/p>
+&lt;p>性格测试需要前后一致，偏向于性格主动、有责任感、创新精神、有主见、信任团队伙伴、同事领导真诚可靠。另一类选最符合最不符合的则需要选对最符合的（按照上面的性格），并且最不符合的避开与最符合相似的答案。&lt;/p>
+&lt;h2 id="三复盘">三、复盘&lt;/h2>
+&lt;p>首先是简历问题，现在做的内容太多是FPGA的、如果想要入行IC、需要补充更多IC的例子。其次解决问题的能力，得想想项目中的痛点，我是如何解决痛点的。然后是对项目中的性能进行优化、关注指标参数，而不能只是做了出来，需要有产品优化的意识。&lt;/p>
+&lt;p>其次是问题准备不够充分，上面的问题未来会在新的文章里补充。&lt;/p>
+&lt;p>需要补充一些高速串行、总线的知识、有的会问FPGA的硬件内容。&lt;/p></description></item><item><title>成瘾、学习、博弈、爱</title><link>https://zhaolinghao00.github.io/post/2025/08/15/%E6%88%90%E7%98%BE%E5%AD%A6%E4%B9%A0%E5%8D%9A%E5%BC%88%E7%88%B1/</link><pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/15/%E6%88%90%E7%98%BE%E5%AD%A6%E4%B9%A0%E5%8D%9A%E5%BC%88%E7%88%B1/</guid><description>&lt;blockquote>
+&lt;p>bilibili - “大学不开的课程之：成瘾、学习、博弈与爱”&lt;/p>&lt;/blockquote>
+&lt;p>本文主要是记录在b站看到的一个视频，关于一个老师分享他对于大学生一些困惑的解答，包含四个方面分别是成瘾、学习、博弈和爱。&lt;/p>
+&lt;hr>
+&lt;h1 id="成瘾性问题">成瘾性问题&lt;/h1>
+&lt;p>过去也有成瘾性问题，比如鸦片，现在的电子产品内在的算法让成瘾变得“科学、现代”，过去解决成瘾性问题会通过&lt;del>鸡汤、话疗、口号&lt;/del>，现在则更应该从&lt;strong>脑科学&lt;/strong>和&lt;strong>神经科学&lt;/strong>角度出发，从内解决问题。&lt;/p>
+&lt;h2 id="成瘾的机制---多巴胺皮质醇内啡肽血清素与催产素">成瘾的机制 - 多巴胺、皮质醇、内啡肽、血清素与催产素。&lt;/h2>
+&lt;h3 id="1-多巴胺">1. 多巴胺&lt;/h3>
+&lt;p>多巴胺是成瘾的主要因素，它让人感到快乐，并持续的去做同样的事情，现在的软件算法不断更新迭代从而获取你更多的注意力。&lt;/p>
+&lt;p>比如说微信的红点；个人会期待社会认可，更希望自己的朋友圈有人点赞和互动；自动播放与刷新；各种吃瓜、抽象的新颖性（缺乏见贤思齐）；害怕团队的离群与社交控制；社交的相互性；最主要的是&lt;strong>可变的奖励模式&lt;/strong>，这也是短视频、开箱、菠菜致人成瘾的主要模式，对下一次的未知让人感到期待，并在“jackpot”时候分泌大量多巴胺。&lt;/p>
+&lt;p>上述现象的结果就是：对多巴胺的渴望、个人行为的失控、不计后果、强迫性；&lt;/p>
+&lt;h3 id="2-皮质醇压力">2. 皮质醇（压力）&lt;/h3>
+&lt;blockquote>
 &lt;p>调查显示过去十年的女性的自杀行为增加70%，远大于男生的25%&lt;/p>&lt;/blockquote>
-&lt;p>虚假的压力：朋友圈的“光鲜”。这种压力没有解决的途径，从而引发焦虑（女性更容易焦虑）。&lt;/p>
-&lt;p>正常的压力：问题可以解决，带来动力。&lt;/p>
-&lt;h5 id="3-内啡肽血清素和催产素的治愈作用">3. 内啡肽、血清素和催产素的治愈作用&lt;/h5>
+&lt;p>在浏览朋友圈中的“光鲜”的同时感受到的“虚假的压力”，由于每个人的生活不同，这种压力没有解决的途径，进而引发焦虑（通常来说女性更容易感到这种焦虑）。&lt;/p>
+&lt;p>而正常的压力意味着问题可以解决，从而带来动力。&lt;/p>
+&lt;h3 id="3-内啡肽血清素和催产素的治愈作用">3. 内啡肽、血清素和催产素的治愈作用&lt;/h3>
 &lt;ul>
 &lt;li>
 &lt;p>内啡肽：镇痛剂、镇静剂，感到痛苦时身体就会分泌内啡肽&lt;/p>
@@ -34,11 +107,11 @@
 &lt;/ul>
 &lt;/li>
 &lt;/ul>
-&lt;p>摆脱上瘾，实际就是提升内啡肽、催产素和血清素的比例，把多巴胺和皮质醇压下去，从而达到平和的状态。&lt;/p>
+&lt;p>摆脱上瘾，实际就是提升内啡肽、催产素和血清素的比例，减少多巴胺和皮质醇，从而达到平和的状态。&lt;/p>
 &lt;hr>
-&lt;h3 id="天才的学习方法">天才的学习方法&lt;/h3>
+&lt;h1 id="天才的学习方法">天才的学习方法&lt;/h1>
 &lt;p>如何产生记忆、高效保持记忆、提取记忆&lt;/p>
-&lt;h4 id="什么是记忆">什么是记忆&lt;/h4>
+&lt;h2 id="什么是记忆">什么是记忆&lt;/h2>
 &lt;ol>
 &lt;li>鲜活记忆，瞬间&lt;/li>
 &lt;li>工作记忆，3-5秒，通过复述加强记忆&lt;/li>
@@ -50,24 +123,24 @@
 &lt;/li>
 &lt;/ol>
 &lt;p>记忆的本质：大脑的神经元产生新的连接&lt;/p>
-&lt;h4 id="产生和保持记忆">产生和保持记忆&lt;/h4>
+&lt;h2 id="产生和保持记忆">产生和保持记忆&lt;/h2>
 &lt;p>集中学习与间隔学习：寻求短期记忆则采用集中学习，寻求长期记忆则采用间隔学习，间隔的时间应该为需要牢记的学习时间的20%。&lt;/p>
 &lt;p>交错效应：交替刺激大脑不同片区的效果更好，更容易产生温故而知新和产生灵感的感觉。&lt;/p>
 &lt;p>生成效应：我们更容易记住自己产出的知识。&lt;/p>
 &lt;p>测试效应：猜测、预习，学习自己不知道的那部分知识（了解&amp;mdash;&amp;ndash;&amp;gt;兴趣）。&lt;/p>
 &lt;p>多媒体效应：文字、图像、声音、行动、思维的混合。&lt;/p>
-&lt;h4 id="如何提取记忆">如何提取记忆&lt;/h4>
+&lt;h2 id="如何提取记忆">如何提取记忆&lt;/h2>
 &lt;p>逻辑与线索：分类、递进、因果、时间&lt;/p>
 &lt;p>相似的环境：触景生情&lt;/p>
 &lt;p>记忆提取练习（费曼学习法）：&lt;strong>加工型复述&lt;/strong>，能否用通俗的语言解释你学习的概念。&lt;/p>
 &lt;p>其他因素：动机（内在和自驱），避免分心，睡眠和运动。&lt;/p>
 &lt;hr>
-&lt;h3 id="博弈论">博弈论&lt;/h3>
+&lt;h1 id="博弈论">博弈论&lt;/h1>
 &lt;p>首先博弈论做出的假设就是每个人都是&lt;strong>绝对理性&lt;/strong>和&lt;strong>绝对自私&lt;/strong>的，这在现实中并不可能但是能反映出人们决策时的倾向。最著名的博弈论就是《美丽心灵》主人公的原型提出的纳什均衡，即每个人都会寻求个人利益最大化而不是集体利益最大化。这就是内卷的主要原因，比较有名的例子有囚徒困境、五海盗分金。&lt;/p>
 &lt;p>个人觉得五海盗分金的故事还是有较大的启发性：一是清楚自己的站位，谁会为自己的付出买账；二是作为“老实人”的角色需要踏实干活，不能和“关系户”比较，不能躺平和摆烂，该有的都会有的。&lt;/p>
 &lt;p>通过管理、宣传可以提高个人寻求集体利益的可能性：比如奖励贡献集体的个人，舍己为人的势力等。境外势力则会反之，宣传普世价值，鼓动颜色革命。&lt;/p>
 &lt;p>在回顾过去的时候发现以前的人喜欢谈家国，谈情怀，那时候的集体主义扎根在大多数人的脑子里。今天则爱说年轻人是精致的利己主义，爱说人不为己天诛地灭。信息时代的交流便利促进了不同文化的融合，让年轻一代受到更多西方个人主义的影响，但是我依然相信有那么一部分人愿意放弃一部分个人利益去追求集体利益。&lt;/p>
 &lt;hr>
-&lt;h3 id="爱">爱&lt;/h3>
-&lt;p>老师推荐了一部电影叫做《牧马人》，武有少林寺，文有牧马人。&lt;/p></description></item><item><title>记录和一些面经</title><link>https://zhaolinghao00.github.io/post/2025/08/13/%E8%AE%B0%E5%BD%95%E5%92%8C%E4%B8%80%E4%BA%9B%E9%9D%A2%E7%BB%8F/</link><pubDate>Wed, 13 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/13/%E8%AE%B0%E5%BD%95%E5%92%8C%E4%B8%80%E4%BA%9B%E9%9D%A2%E7%BB%8F/</guid><description>&lt;img src="https://zhaolinghao00.github.io/images/fc950829cf708424680199ce1faf99f2.jpg" style="max_width:1%;min_width:10px;float:middle;" alt="fc950829cf708424680199ce1faf99f2" /></description></item><item><title>About me</title><link>https://zhaolinghao00.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/about/</guid><description>&lt;h2 id="先空着-后面补上">先空着 后面补上&lt;/h2>
+&lt;h1 id="爱">爱&lt;/h1>
+&lt;p>老师推荐了一部电影叫做《牧马人》，中国电影武有少林寺，文有牧马人。&lt;/p></description></item><item><title>About me</title><link>https://zhaolinghao00.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/about/</guid><description>&lt;h2 id="先空着-后面补上">先空着 后面补上&lt;/h2>
 &lt;h3 id="关于我">关于我&lt;/h3></description></item></channel></rss>
