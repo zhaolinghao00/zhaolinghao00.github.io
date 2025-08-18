@@ -19,12 +19,12 @@ endmodule
 |----------------绝对延迟---------------&gt;|
 </code></pre><p>不同的传输过程的绝对延迟不一样。</p><p>当outstanding为3的时候，并且突发长度为8。</p><pre><code class=language-text>请求1 请求2 请求3
 	 数据1(1-2-3-4-5-6-7-8)数据2(1-2-3-4-5-6-7-8)数据3(1-2-3-4-5-6-7-8)
-	 					  响应1                 响应2                 响应3
+                          响应1                 响应2                 响应3
 |--------绝对延迟1------------&gt;|
       |-----------------绝对延迟2------------------&gt;|
       	   |--------------------------绝对延迟3--------------------------&gt;|
-|---------平均延迟1-------&gt;|--------平均延迟2-------&gt;|------平均延迟3-------&gt;|
+|---------平均延迟1-------&gt;|--------平均延迟2-------&gt;|------平均延迟3------&gt;|
 </code></pre><p>outstanding并没有减少单次传输<code>绝对延迟</code>（甚至更长），但是减少了多次传输的<code>平均延迟</code></p><p>换句话说，由于三次传输的总时间减少，可以减少系统总线的占用，提高总线的带宽。</p><p>以上都是以写过程作为示例，下面则是通过一个读过程计算带宽。</p><p>假设系统的总线带宽：128bit=16Byte，总线时钟频率800MHz，最大突发长度16，outstanding为8，平均读延迟800ns。计算系统的平均带宽？</p><blockquote><p><a href=https://zhuanlan.zhihu.com/p/720178667>参考</a>中后面的平均延迟时间应该指的是单次传输的<strong>必要时间</strong>，前面的平均时间是用来比较osd对传输速率的影响。这里我更倾向于8次osd的总延迟为800ns，也就是下面所示的过程。</p></blockquote><pre><code class=language-tex>请求1 请求2 ... 请求7 请求8
-	              数据1（1-2...15-16）...数据8
+                  数据1（1-2...15-16）...数据8
 |------------------800ns------------------&gt;|
 </code></pre><p>所以平均带宽应该为 最大带宽×有效数据传输的占比 即12.8GBps×1.25ns×16×8/800ns = 2.56GBps</p></main><footer><link rel=stylesheet href=//cdn.jsdelivr.net/npm/katex/dist/katex.min.css><script src=//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js defer></script><script src=//cdn.jsdelivr.net/npm/katex/dist/katex.min.js defer></script><script src=//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js defer></script><script src=//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js defer></script><script src=//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js defer></script><hr>© <a href=https://zhaolinghao00.github.io>linghao</a> 2025 &ndash; 2025 | <a href=https://github.com/zhaolinghao00>Github</a></footer></body></html>
