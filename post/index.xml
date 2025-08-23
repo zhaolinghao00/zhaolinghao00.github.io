@@ -1,4 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 0号树洞</title><link>https://zhaolinghao00.github.io/post/</link><description>Recent content in Posts on 0号树洞</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sun, 17 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaolinghao00.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>刷题（2）</title><link>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</guid><description>&lt;p>马上要笔试了赶紧学习一下&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 0号树洞</title><link>https://zhaolinghao00.github.io/post/</link><description>Recent content in Posts on 0号树洞</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaolinghao00.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>刷题（3）</title><link>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</link><pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</guid><description>&lt;p>今天做了三个笔试，记录下相关考点&lt;/p>
+&lt;h3 id="1-case的特殊用法">1. case的特殊用法&lt;/h3>
+&lt;pre>&lt;code class="language-verilog">always @(*)begin
+case(1'b1)
+ s1:state 1 ;
+ s2:state 2 ; 
+ s3:state 3 ; 
+ default：state 4 ;
+endcase
+&lt;/code>&lt;/pre>
+&lt;p>优先级编码 用的比较少，等同于&lt;/p>
+&lt;pre>&lt;code class="language-verilog">if (s1)
+ state 1;
+else if (s2)
+ state 2;
+else if (s3)
+ state 3;
+else 
+ state 4;
+&lt;/code>&lt;/pre>
+&lt;blockquote>
+&lt;p>回顾下case、casez、casex&lt;/p>
+&lt;pre>&lt;code class="language-verilog">case(expression)
+item : statement;
+&lt;/code>&lt;/pre>
+&lt;p>当 &lt;code>item&lt;/code> 和 &lt;code>expresion&lt;/code> &lt;strong>完全&lt;/strong>匹配才会执行&lt;/p>
+&lt;pre>&lt;code class="language-verilog">casez(expression)
+item : statement;
+&lt;/code>&lt;/pre>
+&lt;p>匹配时不关心Z值&lt;/p>
+&lt;pre>&lt;code class="language-verilog">casex(expression)
+item : statement;
+&lt;/code>&lt;/pre>
+&lt;p>匹配时不关心 x/z 的值，最好不要使用casex&lt;/p>&lt;/blockquote>
+&lt;h3 id="2-贴片电阻封装和功率">2. 贴片电阻封装和功率&lt;/h3>
+&lt;ul>
+&lt;li>封装 功率&lt;/li>
+&lt;li>0201 1/20W&lt;/li>
+&lt;li>0402 1/16W&lt;/li>
+&lt;li>0603 1/10W&lt;/li>
+&lt;li>0805 1/8W&lt;/li>
+&lt;li>1206 1/4W&lt;/li>
+&lt;/ul>
+&lt;h3 id="3-信号完整性">3. 信号完整性&lt;/h3>
+&lt;p>电源完整性和信号完整性的相互影响&lt;/p></description></item><item><title>刷题（2）</title><link>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</guid><description>&lt;p>马上要笔试了赶紧学习一下&lt;/p>
 &lt;h3 id="1-电迁移和电迁移违例electro-migration-violation">1. 电迁移和电迁移违例(Electro-Migration Violation)&lt;/h3>
 &lt;p>电迁移：电流流动引起的原子运动&lt;/p>
 &lt;p>电迁移故障用平均故障时间来描述

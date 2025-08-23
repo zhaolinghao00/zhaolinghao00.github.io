@@ -1,0 +1,29 @@
+<!doctype html><html lang=zh-cn><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>刷题（3） | 0号树洞</title><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/fonts.css></head><body><nav><ul class=menu><li><a href=/>主页</a></li><li><a href=/about/>关于</a></li><li><a href=/categories/>分类</a></li><li><a href=/tags/>标签</a></li><li><a href=/index.xml>订阅</a></li></ul><hr></nav><div class=article-meta><h1><span class=title>刷题（3）</span></h1><h2 class=date>2025/08/23</h2></div><main><p>今天做了三个笔试，记录下相关考点</p><h3 id=1-case的特殊用法>1. case的特殊用法</h3><pre><code class=language-verilog>always @(*)begin
+case(1'b1)
+    s1:state 1 ;
+    s2:state 2 ; 
+    s3:state 3 ; 
+    default：state 4 ;
+endcase
+</code></pre><p>优先级编码 用的比较少，等同于</p><pre><code class=language-verilog>if (s1)
+    state 1;
+else if (s2)
+    state 2;
+else if (s3)
+    state 3;
+else 
+    state 4;
+</code></pre><blockquote><p>回顾下case、casez、casex</p><pre><code class=language-verilog>case(expression)
+item : statement;
+</code></pre><p>当 <code>item</code> 和 <code>expresion</code> <strong>完全</strong>匹配才会执行</p><pre><code class=language-verilog>casez(expression)
+item : statement;
+</code></pre><p>匹配时不关心Z值</p><pre><code class=language-verilog>casex(expression)
+item : statement;
+</code></pre><p>匹配时不关心 x/z 的值，最好不要使用casex</p></blockquote><h3 id=2-贴片电阻封装和功率>2. 贴片电阻封装和功率</h3><ul><li>封装 功率</li><li>0201 1/20W</li><li>0402 1/16W</li><li>0603 1/10W</li><li>0805 1/8W</li><li>1206 1/4W</li></ul><h3 id=3-信号完整性>3. 信号完整性</h3><p>电源完整性和信号完整性的相互影响</p><p>常见阻抗标准：单端50Ω、单端75Ω、差分100Ω、90Ω。</p><p>高速信号使用介电常数低，介电损耗正切角的板材。</p><p>串联端接电路靠近<strong>发送端</strong>。</p><p>峰值电流控制降压电路中次谐波震荡和谐波补偿产生边界点在于50%占空比。</p><h3 id=4-其他>4. 其他</h3><p>106对应10和6，10代表数值、6代表后面0的个数，所以106Ω为10,000,000Ω。</p><h3 id=5-数电>5. 数电</h3><p>通用逻辑门：NAND、NOR</p><ul><li>单独NAND</li><li>单独NOR</li><li>与、或、非门组合</li></ul><p>可以实现任意逻辑；</p><h3 id=6-电路分析>6 电路分析</h3><pre><code class=language-verilog>always @(posedge clk or negedge rst_n)begin
+    if(!rst_n)begin
+        a &lt;= 1'b0;
+    end
+    else if (b&gt;1'b0)
+        a &lt;= b;
+end
+</code></pre><p>b为高电平时，a才会被赋值为b -> 电平敏感；</p></main><footer><link rel=stylesheet href=//cdn.jsdelivr.net/npm/katex/dist/katex.min.css><script src=//cdn.jsdelivr.net/npm/@xiee/utils/js/math-code.min.js defer></script><script src=//cdn.jsdelivr.net/npm/katex/dist/katex.min.js defer></script><script src=//cdn.jsdelivr.net/npm/katex/dist/contrib/auto-render.min.js defer></script><script src=//cdn.jsdelivr.net/npm/@xiee/utils/js/render-katex.js defer></script><script src=//cdn.jsdelivr.net/npm/@xiee/utils/js/center-img.min.js defer></script><hr>© <a href=https://zhaolinghao00.github.io>linghao</a> 2025 &ndash; 2025 | <a href=https://github.com/zhaolinghao00>Github</a></footer></body></html>
