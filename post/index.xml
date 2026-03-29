@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 0号树洞</title><link>https://zhaolinghao00.github.io/post/</link><description>Recent content in Posts on 0号树洞</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaolinghao00.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>刷题（3）</title><link>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</link><pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</guid><description>&lt;p>今天做了三个笔试，记录下相关考点&lt;/p>
-&lt;h3 id="1-case的特殊用法">1. case的特殊用法&lt;/h3>
-&lt;pre>&lt;code class="language-verilog">always @(*)begin
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on 0号树洞</title><link>https://zhaolinghao00.github.io/post/</link><description>Recent content in Posts on 0号树洞</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaolinghao00.github.io/post/index.xml" rel="self" type="application/rss+xml"/><item><title>刷题（3）</title><link>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</link><pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</guid><description>&lt;p&gt;今天做了三个笔试，记录下相关考点&lt;/p&gt;
+&lt;h3 id="1-case的特殊用法"&gt;1. case的特殊用法
+&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-verilog"&gt;always @(*)begin
 case(1'b1)
  s1:state 1 ;
  s2:state 2 ; 
  s3:state 3 ; 
  default：state 4 ;
 endcase
-&lt;/code>&lt;/pre>
-&lt;p>优先级编码 用的比较少，等同于&lt;/p>
-&lt;pre>&lt;code class="language-verilog">if (s1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;优先级编码 用的比较少，等同于&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-verilog"&gt;if (s1)
  state 1;
 else if (s2)
  state 2;
@@ -17,57 +17,84 @@ else if (s3)
  state 3;
 else 
  state 4;
-&lt;/code>&lt;/pre>
-&lt;blockquote>
-&lt;p>回顾下case、casez、casex&lt;/p>
-&lt;pre>&lt;code class="language-verilog">case(expression)
+&lt;/code&gt;&lt;/pre&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;回顾下case、casez、casex&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-verilog"&gt;case(expression)
 item : statement;
-&lt;/code>&lt;/pre>
-&lt;p>当 &lt;code>item&lt;/code> 和 &lt;code>expresion&lt;/code> &lt;strong>完全&lt;/strong>匹配才会执行&lt;/p>
-&lt;pre>&lt;code class="language-verilog">casez(expression)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;当 &lt;code&gt;item&lt;/code&gt; 和 &lt;code&gt;expresion&lt;/code&gt; &lt;strong&gt;完全&lt;/strong&gt;匹配才会执行&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-verilog"&gt;casez(expression)
 item : statement;
-&lt;/code>&lt;/pre>
-&lt;p>匹配时不关心Z值&lt;/p>
-&lt;pre>&lt;code class="language-verilog">casex(expression)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;匹配时不关心Z值&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-verilog"&gt;casex(expression)
 item : statement;
-&lt;/code>&lt;/pre>
-&lt;p>匹配时不关心 x/z 的值，最好不要使用casex&lt;/p>&lt;/blockquote>
-&lt;h3 id="2-贴片电阻封装和功率">2. 贴片电阻封装和功率&lt;/h3>
-&lt;ul>
-&lt;li>封装 功率&lt;/li>
-&lt;li>0201 1/20W&lt;/li>
-&lt;li>0402 1/16W&lt;/li>
-&lt;li>0603 1/10W&lt;/li>
-&lt;li>0805 1/8W&lt;/li>
-&lt;li>1206 1/4W&lt;/li>
-&lt;/ul>
-&lt;h3 id="3-信号完整性">3. 信号完整性&lt;/h3>
-&lt;p>电源完整性和信号完整性的相互影响&lt;/p></description></item><item><title>刷题（2）</title><link>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</guid><description>&lt;p>马上要笔试了赶紧学习一下&lt;/p>
-&lt;h3 id="1-电迁移和电迁移违例electro-migration-violation">1. 电迁移和电迁移违例(Electro-Migration Violation)&lt;/h3>
-&lt;p>电迁移：电流流动引起的原子运动&lt;/p>
-&lt;p>电迁移故障用平均故障时间来描述
-&lt;/p>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;匹配时不关心 x/z 的值，最好不要使用casex&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h3 id="2-贴片电阻封装和功率"&gt;2. 贴片电阻封装和功率
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;封装 功率&lt;/li&gt;
+&lt;li&gt;0201 1/20W&lt;/li&gt;
+&lt;li&gt;0402 1/16W&lt;/li&gt;
+&lt;li&gt;0603 1/10W&lt;/li&gt;
+&lt;li&gt;0805 1/8W&lt;/li&gt;
+&lt;li&gt;1206 1/4W&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-信号完整性"&gt;3. 信号完整性
+&lt;/h3&gt;&lt;p&gt;电源完整性和信号完整性的相互影响&lt;/p&gt;
+&lt;p&gt;常见阻抗标准：单端50Ω、单端75Ω、差分100Ω、90Ω。&lt;/p&gt;
+&lt;p&gt;高速信号使用介电常数低，介电损耗正切角的板材。&lt;/p&gt;
+&lt;p&gt;串联端接电路靠近&lt;strong&gt;发送端&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;峰值电流控制降压电路中次谐波震荡和谐波补偿产生边界点在于50%占空比。&lt;/p&gt;
+&lt;h3 id="4-其他"&gt;4. 其他
+&lt;/h3&gt;&lt;p&gt;106对应10和6，10代表数值、6代表后面0的个数，所以106Ω为10,000,000Ω。&lt;/p&gt;
+&lt;h3 id="5-数电"&gt;5. 数电
+&lt;/h3&gt;&lt;p&gt;通用逻辑门：NAND、NOR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单独NAND&lt;/li&gt;
+&lt;li&gt;单独NOR&lt;/li&gt;
+&lt;li&gt;与、或、非门组合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以实现任意逻辑；&lt;/p&gt;
+&lt;h3 id="6-电路分析"&gt;6 电路分析
+&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-verilog"&gt;always @(posedge clk or negedge rst_n)begin
+ if(!rst_n)begin
+ a &amp;lt;= 1'b0;
+ end
+ else if (b&amp;gt;1'b0)
+ a &amp;lt;= b;
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;b为高电平时，a才会被赋值为b -&amp;gt; 电平敏感；&lt;/p&gt;</description></item><item><title>刷题（2）</title><link>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</guid><description>&lt;p&gt;马上要笔试了赶紧学习一下&lt;/p&gt;
+&lt;h3 id="1-电迁移和电迁移违例electro-migration-violation"&gt;1. 电迁移和电迁移违例(Electro-Migration Violation)
+&lt;/h3&gt;&lt;p&gt;电迁移：电流流动引起的原子运动&lt;/p&gt;
+&lt;p&gt;电迁移故障用平均故障时间来描述
+&lt;/p&gt;
 $$
 MTTF\propto J^{-N}e^{\frac{E_a}{kT}}
-$$&lt;p>
-受到 &lt;strong>J&lt;/strong>电流密度、&lt;strong>N&lt;/strong>比例因子、&lt;strong>T&lt;/strong>温度、&lt;strong>Ea&lt;/strong>激活能影响&lt;/p>
-&lt;p>产生的原因：&lt;/p>
-&lt;ol>
-&lt;li>金属线太长，增加电阻，温度上升&lt;/li>
-&lt;li>fanout太多，大电流&lt;/li>
-&lt;li>cell驱动太强比如X16,X20，导致电流密度大&lt;/li>
-&lt;li>transition time 太快&lt;/li>
-&lt;/ol>
-&lt;p>改善措施包括：&lt;/p>
-&lt;ol>
-&lt;li>增加互联宽度，降低电流密度&lt;/li>
-&lt;li>使用具有高电迁移耐力的材料，金和铜&lt;/li>
-&lt;li>使用冗余通孔分流电流强度&lt;/li>
-&lt;li>减少互连器件之间的间距（减少互连长度）&lt;/li>
-&lt;li>设计低电压水平的电流&lt;/li>
-&lt;/ol>
-&lt;h3 id="2-运行以下程序输出的值是">2. 运行以下程序输出的值是？&lt;/h3>
-&lt;pre>&lt;code class="language-systemverilog">int addr = 32'ha;
+$$&lt;p&gt;
+受到 &lt;strong&gt;J&lt;/strong&gt;电流密度、&lt;strong&gt;N&lt;/strong&gt;比例因子、&lt;strong&gt;T&lt;/strong&gt;温度、&lt;strong&gt;Ea&lt;/strong&gt;激活能影响&lt;/p&gt;
+&lt;p&gt;产生的原因：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;金属线太长，增加电阻，温度上升&lt;/li&gt;
+&lt;li&gt;fanout太多，大电流&lt;/li&gt;
+&lt;li&gt;cell驱动太强比如X16,X20，导致电流密度大&lt;/li&gt;
+&lt;li&gt;transition time 太快&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;改善措施包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;增加互联宽度，降低电流密度&lt;/li&gt;
+&lt;li&gt;使用具有高电迁移耐力的材料，金和铜&lt;/li&gt;
+&lt;li&gt;使用冗余通孔分流电流强度&lt;/li&gt;
+&lt;li&gt;减少互连器件之间的间距（减少互连长度）&lt;/li&gt;
+&lt;li&gt;设计低电压水平的电流&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="2-运行以下程序输出的值是"&gt;2. 运行以下程序输出的值是？
+&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-systemverilog"&gt;int addr = 32'ha;
 bit is_legal;
 bit [33:0] info0;
 
@@ -82,10 +109,49 @@ initial begin
  $display(&amp;quot;0x%0h&amp;quot;, info0);
 end
 endmodule
-&lt;/code>&lt;/pre>
-&lt;p>这里的关键点首先是is_legal = 1 ; is_legal = ~is_legal;&lt;/p></description></item><item><title>刷题（1）</title><link>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</guid><description>&lt;p>马上就要中期，即便如此也要坚持刷题，应对笔试。&lt;/p>
-&lt;h3 id="可以正确表述以下fork-join_any语句的是">可以正确表述以下fork join_any语句的是？&lt;/h3>
-&lt;pre>&lt;code class="language-systemverilog">begin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里的关键点首先是is_legal = 1 ; is_legal = ~is_legal;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;~&lt;/code&gt;是按位操作，所以这里运行完is_legal是34’b3_ffff_fffe&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;~ 按位取反&lt;/p&gt;
+&lt;p&gt;! 逻辑非&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;其次是&lt;code&gt;{info0,0}&lt;/code&gt;这里0没有指定位宽默认为32位。这里拼接之后就是34+32 = 66 bits赋值的时候截取低32bit。&lt;/p&gt;
+&lt;h3 id="3-axi带宽分析"&gt;3. AXI带宽分析
+&lt;/h3&gt;&lt;p&gt;几个关键参数：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;绝对延时&lt;/strong&gt;：M发出命令到M收到响应的延时；&lt;strong&gt;平均延迟&lt;/strong&gt;：总传输延迟除以传输次数&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-text"&gt;发出请求-&amp;gt;传输数据(1-2-3-4-5-6-7-8)-&amp;gt;收到响应
+|----------------绝对延迟---------------&amp;gt;|
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不同的传输过程的绝对延迟不一样。&lt;/p&gt;
+&lt;p&gt;当outstanding为3的时候，并且突发长度为8。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-text"&gt;请求1 请求2 请求3
+	 数据1(1-2-3-4-5-6-7-8)数据2(1-2-3-4-5-6-7-8)数据3(1-2-3-4-5-6-7-8)
+ 响应1 响应2 响应3
+|--------绝对延迟1------------&amp;gt;|
+ |-----------------绝对延迟2------------------&amp;gt;|
+ 	 |--------------------------绝对延迟3--------------------------&amp;gt;|
+|---------平均延迟1-------&amp;gt;|--------平均延迟2-------&amp;gt;|------平均延迟3------&amp;gt;|
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;outstanding并没有减少单次传输&lt;code&gt;绝对延迟&lt;/code&gt;（甚至更长），但是减少了多次传输的&lt;code&gt;平均延迟&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;换句话说，由于三次传输的总时间减少，可以减少系统总线的占用，提高总线的带宽。&lt;/p&gt;
+&lt;p&gt;以上都是以写过程作为示例，下面则是通过一个读过程计算带宽。&lt;/p&gt;
+&lt;p&gt;假设系统的总线带宽：128bit=16Byte，总线时钟频率800MHz，最大突发长度16，outstanding为8，平均读延迟800ns。计算系统的平均带宽？&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/720178667" target="_blank" rel="noopener"
+ &gt;参考&lt;/a&gt;中后面的平均延迟时间应该指的是单次传输的&lt;strong&gt;必要时间&lt;/strong&gt;，前面的平均时间是用来比较osd对传输速率的影响。这里我更倾向于8次osd的总延迟为800ns，也就是下面所示的过程。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class="language-tex"&gt;请求1 请求2 ... 请求7 请求8
+ 数据1（1-2...15-16）...数据8
+|------------------800ns------------------&amp;gt;|
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;所以平均带宽应该为 最大带宽×有效数据传输的占比 即12.8GBps×1.25ns×16×8/800ns = 2.56GBps&lt;/p&gt;</description></item><item><title>刷题（1）</title><link>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</guid><description>&lt;p&gt;马上就要中期，即便如此也要坚持刷题，应对笔试。&lt;/p&gt;
+&lt;h3 id="可以正确表述以下fork-join_any语句的是"&gt;可以正确表述以下fork join_any语句的是？
+&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-systemverilog"&gt;begin
  fork 
  进程a;
  进程b;
@@ -93,128 +159,138 @@ endmodule
  join_any
  	进程d;
 end
-&lt;/code>&lt;/pre>
-&lt;blockquote>
-&lt;p>fork join：必须等待进程1，进程2，进程3全部执行完毕之后，进程4才可以执行。&lt;/p>
-&lt;p>fork join_any：必须等待进程1，进程2，进程3&lt;strong>任何&lt;/strong>一个执行完毕后，进程4才可以执行&lt;/p>
-&lt;p>fork join_none：进程4是否执行不依赖于进程1，进程2，进程3，他们可以同步执行。&lt;/p>&lt;/blockquote>
-&lt;p>所以这里答案是进程abc同时启动，有一个进程结束，进程d就可以启动。&lt;/p>
-&lt;h3 id="cmos设计中动态功耗与什么有关">CMOS设计中动态功耗与什么有关&lt;/h3>
-&lt;p>动态功耗用下式表示
-&lt;/p>
+&lt;/code&gt;&lt;/pre&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;fork join：必须等待进程1，进程2，进程3全部执行完毕之后，进程4才可以执行。&lt;/p&gt;
+&lt;p&gt;fork join_any：必须等待进程1，进程2，进程3&lt;strong&gt;任何&lt;/strong&gt;一个执行完毕后，进程4才可以执行&lt;/p&gt;
+&lt;p&gt;fork join_none：进程4是否执行不依赖于进程1，进程2，进程3，他们可以同步执行。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;所以这里答案是进程abc同时启动，有一个进程结束，进程d就可以启动。&lt;/p&gt;
+&lt;h3 id="cmos设计中动态功耗与什么有关"&gt;CMOS设计中动态功耗与什么有关
+&lt;/h3&gt;&lt;p&gt;动态功耗用下式表示
+&lt;/p&gt;
 $$
 P_{dyn}=C_LV_{DD}^2f_{0\rightarrow1}
-$$&lt;p>CL负载电容，VDD电源电压、f 0-&amp;gt;1开关活动性，(为啥hugo就不能支持行内公式)&lt;/p>
-&lt;p>工艺也会影响晶体管尺寸和互连电容从而改变负载电容&lt;/p></description></item><item><title>面经（1）</title><link>https://zhaolinghao00.github.io/post/2025/08/16/%E9%9D%A2%E7%BB%8F1/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/16/%E9%9D%A2%E7%BB%8F1/</guid><description>&lt;p>最近投递了三四十家公司，做了十几份测评，面试两家公司，然后和朋友室友交流了一些面试过程中遇到的问题，记录一下需要强化的内容。&lt;/p>
-&lt;hr>
-&lt;h2 id="一面试">一、面试&lt;/h2>
-&lt;p>面试考察三方面：专业性、人际关系、稳定性&lt;/p>
-&lt;p>&lt;strong>专业性&lt;/strong>就是技术面，考察对专业知识、问题解决、抗压等能力是否符合岗位要求。&lt;/p>
-&lt;p>&lt;strong>人际关系&lt;/strong>往往是对同事关系、团队协作和谐的评估。&lt;/p>
-&lt;p>&lt;strong>稳定性&lt;/strong>之前问过女友、工作地与居住地、通勤。&lt;/p>
-&lt;hr>
-&lt;p>简历是HR或者面试官了解面试者的第一步，简历这部分一般与面试的内容重复度很高，放在一起讲&lt;/p>
-&lt;p>hr不了解相关技术，他希望看到的是和岗位要求匹配的技能和项目，这要求简历与岗位描述相呼应，也就是说不能跨岗投递。&lt;/p>
-&lt;p>专业面试官一方面是和公司业务有关联的项目经历、技能优势，其次也考察个人的探索、创造能力。面试官希望看到的是你在项目中不止考虑实现方案，更考虑相关的优化问题。印象最深的是被问到：&lt;/p>
-&lt;h3 id="有什么体现你的学术能力解决问题的能力的事情吗">有什么体现你的&lt;strong>学术能力&lt;/strong>，&lt;strong>解决问题&lt;/strong>的能力的事情吗？&lt;/h3>
-&lt;p>当时的回答简直一塌糊涂，说了一堆为了做什么而去学了什么的东西。感觉侧重点并没有放在解决问题上。最近看到一篇关于米哈游前员工丁盛豪的文章，他在米哈游离职后，创办自己的AI游戏公司，其中有两个他在米哈游任职期间的故事，这或许是面试官乐于听到的：&lt;/p>
-&lt;p>第一个是关于他在进行语音训练集录制的时候，房间的底噪无法过滤，需要购买几千的专业设备，而他在研究后发现只需要计算低频驻波的大小并且找到正好匹配的泡沫就能搞定，最终只花费了十几块购买EVA泡沫，就将环境的底噪降低了几十dB。&lt;/p>
-&lt;p>第二个是他对于云延迟游戏方案的延迟优化。当时的云游戏使用的开源框架存在掉帧、延迟大、不跟手的问题，大厂当时通过在芯片中设计专门的延迟计算单元，而丁的延迟测量方式则是通过索尼手机的高速摄影，仅仅花费不到200元。&lt;/p>
-&lt;p>要论学术能力或许都有点虚了，但这两个故事很好的体现了解决问题的能力。&lt;/p>
-&lt;h3 id="其他问题">其他问题&lt;/h3>
-&lt;h4 id="1-是否有参与产品化的项目">1. 是否有参与产品化的项目？&lt;/h4>
-&lt;p>这个其实是有的，但是当时脑抽了说没有，以纵向课题为主，有套从别人公司买来的产品成熟度挺高的&lt;/p>
-&lt;h4 id="2-想去哪些公司为什么想去这些公司">2. 想去哪些公司，为什么想去这些公司？&lt;/h4>
-&lt;p>这个说的时候只记得自己投了的公司，下一个问题直接懵了，然后开始瞎说。&lt;/p>
-&lt;p>有空让AI补充几个例子&lt;/p>
-&lt;h4 id="3-如果遇到矛盾会怎么解决">3. 如果遇到矛盾，会怎么解决&lt;/h4>
-&lt;p>冷静避免情绪化、主动沟通换位思考、聚焦共同目标、适时求助、反思改进&lt;/p>
-&lt;p>健康的冲突处理能够促进团队的创新和信任，通过积极沟通协作，矛盾范围可能成为优化工作方式的契机。&lt;/p>
-&lt;p>&lt;a href="https://www.zhihu.com/question/12742726879">参考&lt;/a>&lt;/p>
-&lt;h4 id="4-期望薪资">4. 期望薪资&lt;/h4>
-&lt;p>经济差，没敢往高了说，所以说了个自己觉得能接受的。希望能在排序上高点。&lt;/p>
-&lt;h4 id="5职业规划">5.职业规划&lt;/h4>
-&lt;p>这个问题出现在技术面中，当时回答的比较笼统，以下贴一个我觉得不错的&lt;/p>
-&lt;p>“嗯，好的，我现在还是个年轻人，还没有正式开始社会教育，所以您的问题我可能回答不好，但是在我工作的头几年，虽然我不知道我未来发展的会怎样，但是我希望尽自己最大努力配得上我的收入，还有契合我的职业精神。更加希望在工作当中获得成长，并且能在几年内详尽的做好我的职业规划。”&lt;/p>
-&lt;p>上面的回答也是老一辈的工作状况，工作机会难得，从底层做起，因此更加珍惜工作的机会，并且社会发展快，没时间去“想”，做比想更强，做总比不做强。&lt;/p>
-&lt;h4 id="反问">反问&lt;/h4>
-&lt;p>团队氛围和工作环境、晋升考核、部门业务&lt;/p>
-&lt;h2 id="二测评">二、测评&lt;/h2>
-&lt;p>现在做了十几份测评，主要是阅读理解、图表理解、图形推理、性格测试。阅读裂解和图表理解都没啥好说的，图形推理需要去学习考公的图形推理（图形推理据说来自于智商测试，但我认为这个与智商并没有关系）&lt;/p>
-&lt;p>性格测试需要前后一致，偏向于性格主动、有责任感、创新精神、有主见、信任团队伙伴、同事领导真诚可靠。另一类选最符合最不符合的则需要选对最符合的（按照上面的性格），并且最不符合的避开与最符合相似的答案。&lt;/p>
-&lt;h2 id="三复盘">三、复盘&lt;/h2>
-&lt;p>首先是简历问题，现在做的内容太多是FPGA的、如果想要入行IC、需要补充更多IC的例子。其次解决问题的能力，得想想项目中的痛点，我是如何解决痛点的。然后是对项目中的性能进行优化、关注指标参数，而不能只是做了出来，需要有产品优化的意识。&lt;/p>
-&lt;p>其次是问题准备不够充分，上面的问题未来会在新的文章里补充。&lt;/p>
-&lt;p>需要补充一些高速串行、总线的知识、有的会问FPGA的硬件内容。&lt;/p></description></item><item><title>成瘾、学习、博弈、爱</title><link>https://zhaolinghao00.github.io/post/2025/08/15/%E6%88%90%E7%98%BE%E5%AD%A6%E4%B9%A0%E5%8D%9A%E5%BC%88%E7%88%B1/</link><pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/15/%E6%88%90%E7%98%BE%E5%AD%A6%E4%B9%A0%E5%8D%9A%E5%BC%88%E7%88%B1/</guid><description>&lt;blockquote>
-&lt;p>bilibili - “大学不开的课程之：成瘾、学习、博弈与爱”&lt;/p>&lt;/blockquote>
-&lt;p>本文主要是记录在b站看到的一个视频，关于一个老师分享他对于大学生一些困惑的解答，包含四个方面分别是成瘾、学习、博弈和爱。&lt;/p>
-&lt;hr>
-&lt;h1 id="成瘾性问题">成瘾性问题&lt;/h1>
-&lt;p>过去也有成瘾性问题，比如鸦片，现在的电子产品内在的算法让成瘾变得“科学、现代”，过去解决成瘾性问题会通过&lt;del>鸡汤、话疗、口号&lt;/del>，现在则更应该从&lt;strong>脑科学&lt;/strong>和&lt;strong>神经科学&lt;/strong>角度出发，从内解决问题。&lt;/p>
-&lt;h2 id="成瘾的机制---多巴胺皮质醇内啡肽血清素与催产素">成瘾的机制 - 多巴胺、皮质醇、内啡肽、血清素与催产素。&lt;/h2>
-&lt;h3 id="1-多巴胺">1. 多巴胺&lt;/h3>
-&lt;p>多巴胺是成瘾的主要因素，它让人感到快乐，并持续的去做同样的事情，现在的软件算法不断更新迭代从而获取你更多的注意力。&lt;/p>
-&lt;p>比如说微信的红点；个人会期待社会认可，更希望自己的朋友圈有人点赞和互动；自动播放与刷新；各种吃瓜、抽象的新颖性（缺乏见贤思齐）；害怕团队的离群与社交控制；社交的相互性；最主要的是&lt;strong>可变的奖励模式&lt;/strong>，这也是短视频、开箱、菠菜致人成瘾的主要模式，对下一次的未知让人感到期待，并在“jackpot”时候分泌大量多巴胺。&lt;/p>
-&lt;p>上述现象的结果就是：对多巴胺的渴望、个人行为的失控、不计后果、强迫性；&lt;/p>
-&lt;h3 id="2-皮质醇压力">2. 皮质醇（压力）&lt;/h3>
-&lt;blockquote>
-&lt;p>调查显示过去十年的女性的自杀行为增加70%，远大于男生的25%&lt;/p>&lt;/blockquote>
-&lt;p>在浏览朋友圈中的“光鲜”的同时感受到的“虚假的压力”，由于每个人的生活不同，这种压力没有解决的途径，进而引发焦虑（通常来说女性更容易感到这种焦虑）。&lt;/p>
-&lt;p>而正常的压力意味着问题可以解决，从而带来动力。&lt;/p>
-&lt;h3 id="3-内啡肽血清素和催产素的治愈作用">3. 内啡肽、血清素和催产素的治愈作用&lt;/h3>
-&lt;ul>
-&lt;li>
-&lt;p>内啡肽：镇痛剂、镇静剂，感到痛苦时身体就会分泌内啡肽&lt;/p>
-&lt;ul>
-&lt;li>正念、冥想、大小、听舒缓的音乐。&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>催产素：营造温馨、幸福、与感动&lt;/p>
-&lt;ul>
-&lt;li>感受爱，写&lt;strong>感恩日记&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;li>
-&lt;p>血清素：专注、创造力、平和，在夜间转换为褪黑素，起到帮助睡眠的作用。&lt;/p>
-&lt;ul>
-&lt;li>创造点什么东西，当你免费使用一个东西的时候你是它的产品而不是用户（为软件提供大数据）。&lt;strong>做饭、手工、写程序、弹奏，心流状态。&lt;/strong>&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ul>
-&lt;p>摆脱上瘾，实际就是提升内啡肽、催产素和血清素的比例，减少多巴胺和皮质醇，从而达到平和的状态。&lt;/p>
-&lt;hr>
-&lt;h1 id="天才的学习方法">天才的学习方法&lt;/h1>
-&lt;p>如何产生记忆、高效保持记忆、提取记忆&lt;/p>
-&lt;h2 id="什么是记忆">什么是记忆&lt;/h2>
-&lt;ol>
-&lt;li>鲜活记忆，瞬间&lt;/li>
-&lt;li>工作记忆，3-5秒，通过复述加强记忆&lt;/li>
-&lt;li>长期记忆
-&lt;ul>
-&lt;li>临时存储&lt;/li>
-&lt;li>永久存储&lt;/li>
-&lt;/ul>
-&lt;/li>
-&lt;/ol>
-&lt;p>记忆的本质：大脑的神经元产生新的连接&lt;/p>
-&lt;h2 id="产生和保持记忆">产生和保持记忆&lt;/h2>
-&lt;p>集中学习与间隔学习：寻求短期记忆则采用集中学习，寻求长期记忆则采用间隔学习，间隔的时间应该为需要牢记的学习时间的20%。&lt;/p>
-&lt;p>交错效应：交替刺激大脑不同片区的效果更好，更容易产生温故而知新和产生灵感的感觉。&lt;/p>
-&lt;p>生成效应：我们更容易记住自己产出的知识。&lt;/p>
-&lt;p>测试效应：猜测、预习，学习自己不知道的那部分知识（了解&amp;mdash;&amp;ndash;&amp;gt;兴趣）。&lt;/p>
-&lt;p>多媒体效应：文字、图像、声音、行动、思维的混合。&lt;/p>
-&lt;h2 id="如何提取记忆">如何提取记忆&lt;/h2>
-&lt;p>逻辑与线索：分类、递进、因果、时间&lt;/p>
-&lt;p>相似的环境：触景生情&lt;/p>
-&lt;p>记忆提取练习（费曼学习法）：&lt;strong>加工型复述&lt;/strong>，能否用通俗的语言解释你学习的概念。&lt;/p>
-&lt;p>其他因素：动机（内在和自驱），避免分心，睡眠和运动。&lt;/p>
-&lt;hr>
-&lt;h1 id="博弈论">博弈论&lt;/h1>
-&lt;p>首先博弈论做出的假设就是每个人都是&lt;strong>绝对理性&lt;/strong>和&lt;strong>绝对自私&lt;/strong>的，这在现实中并不可能但是能反映出人们决策时的倾向。最著名的博弈论就是《美丽心灵》主人公的原型提出的纳什均衡，即每个人都会寻求个人利益最大化而不是集体利益最大化。这就是内卷的主要原因，比较有名的例子有囚徒困境、五海盗分金。&lt;/p>
-&lt;p>个人觉得五海盗分金的故事还是有较大的启发性：一是清楚自己的站位，谁会为自己的付出买账；二是作为“老实人”的角色需要踏实干活，不能和“关系户”比较，不能躺平和摆烂，该有的都会有的。&lt;/p>
-&lt;p>通过管理、宣传可以提高个人寻求集体利益的可能性：比如奖励贡献集体的个人，舍己为人的势力等。境外势力则会反之，宣传普世价值，鼓动颜色革命。&lt;/p>
-&lt;p>在回顾过去的时候发现以前的人喜欢谈家国，谈情怀，那时候的集体主义扎根在大多数人的脑子里。今天则爱说年轻人是精致的利己主义，爱说人不为己天诛地灭。信息时代的交流便利促进了不同文化的融合，让年轻一代受到更多西方个人主义的影响，但是我依然相信有那么一部分人愿意放弃一部分个人利益去追求集体利益。&lt;/p>
-&lt;hr>
-&lt;h1 id="爱">爱&lt;/h1>
-&lt;p>老师推荐了一部电影叫做《牧马人》，中国电影武有少林寺，文有牧马人。&lt;/p></description></item></channel></rss>
+$$&lt;p&gt;CL负载电容，VDD电源电压、f 0-&amp;gt;1开关活动性，(为啥hugo就不能支持行内公式)&lt;/p&gt;
+&lt;p&gt;工艺也会影响晶体管尺寸和互连电容从而改变负载电容&lt;/p&gt;</description></item><item><title>面经（1）</title><link>https://zhaolinghao00.github.io/post/2025/08/16/%E9%9D%A2%E7%BB%8F1/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/16/%E9%9D%A2%E7%BB%8F1/</guid><description>&lt;p&gt;最近投递了三四十家公司，做了十几份测评，面试两家公司，然后和朋友室友交流了一些面试过程中遇到的问题，记录一下需要强化的内容。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="一面试"&gt;一、面试
+&lt;/h2&gt;&lt;p&gt;面试考察三方面：专业性、人际关系、稳定性&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;专业性&lt;/strong&gt;就是技术面，考察对专业知识、问题解决、抗压等能力是否符合岗位要求。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;人际关系&lt;/strong&gt;往往是对同事关系、团队协作和谐的评估。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;稳定性&lt;/strong&gt;之前问过女友、工作地与居住地、通勤。&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;简历是HR或者面试官了解面试者的第一步，简历这部分一般与面试的内容重复度很高，放在一起讲&lt;/p&gt;
+&lt;p&gt;hr不了解相关技术，他希望看到的是和岗位要求匹配的技能和项目，这要求简历与岗位描述相呼应，也就是说不能跨岗投递。&lt;/p&gt;
+&lt;p&gt;专业面试官一方面是和公司业务有关联的项目经历、技能优势，其次也考察个人的探索、创造能力。面试官希望看到的是你在项目中不止考虑实现方案，更考虑相关的优化问题。印象最深的是被问到：&lt;/p&gt;
+&lt;h3 id="有什么体现你的学术能力解决问题的能力的事情吗"&gt;有什么体现你的&lt;strong&gt;学术能力&lt;/strong&gt;，&lt;strong&gt;解决问题&lt;/strong&gt;的能力的事情吗？
+&lt;/h3&gt;&lt;p&gt;当时的回答简直一塌糊涂，说了一堆为了做什么而去学了什么的东西。感觉侧重点并没有放在解决问题上。最近看到一篇关于米哈游前员工丁盛豪的文章，他在米哈游离职后，创办自己的AI游戏公司，其中有两个他在米哈游任职期间的故事，这或许是面试官乐于听到的：&lt;/p&gt;
+&lt;p&gt;第一个是关于他在进行语音训练集录制的时候，房间的底噪无法过滤，需要购买几千的专业设备，而他在研究后发现只需要计算低频驻波的大小并且找到正好匹配的泡沫就能搞定，最终只花费了十几块购买EVA泡沫，就将环境的底噪降低了几十dB。&lt;/p&gt;
+&lt;p&gt;第二个是他对于云延迟游戏方案的延迟优化。当时的云游戏使用的开源框架存在掉帧、延迟大、不跟手的问题，大厂当时通过在芯片中设计专门的延迟计算单元，而丁的延迟测量方式则是通过索尼手机的高速摄影，仅仅花费不到200元。&lt;/p&gt;
+&lt;p&gt;要论学术能力或许都有点虚了，但这两个故事很好的体现了解决问题的能力。&lt;/p&gt;
+&lt;h3 id="其他问题"&gt;其他问题
+&lt;/h3&gt;&lt;h4 id="1-是否有参与产品化的项目"&gt;1. 是否有参与产品化的项目？
+&lt;/h4&gt;&lt;p&gt;这个其实是有的，但是当时脑抽了说没有，以纵向课题为主，有套从别人公司买来的产品成熟度挺高的&lt;/p&gt;
+&lt;h4 id="2-想去哪些公司为什么想去这些公司"&gt;2. 想去哪些公司，为什么想去这些公司？
+&lt;/h4&gt;&lt;p&gt;这个说的时候只记得自己投了的公司，下一个问题直接懵了，然后开始瞎说。&lt;/p&gt;
+&lt;p&gt;有空让AI补充几个例子&lt;/p&gt;
+&lt;h4 id="3-如果遇到矛盾会怎么解决"&gt;3. 如果遇到矛盾，会怎么解决
+&lt;/h4&gt;&lt;p&gt;冷静避免情绪化、主动沟通换位思考、聚焦共同目标、适时求助、反思改进&lt;/p&gt;
+&lt;p&gt;健康的冲突处理能够促进团队的创新和信任，通过积极沟通协作，矛盾范围可能成为优化工作方式的契机。&lt;/p&gt;
+&lt;p&gt;&lt;a class="link" href="https://www.zhihu.com/question/12742726879" target="_blank" rel="noopener"
+ &gt;参考&lt;/a&gt;&lt;/p&gt;
+&lt;h4 id="4-期望薪资"&gt;4. 期望薪资
+&lt;/h4&gt;&lt;p&gt;经济差，没敢往高了说，所以说了个自己觉得能接受的。希望能在排序上高点。&lt;/p&gt;
+&lt;h4 id="5职业规划"&gt;5.职业规划
+&lt;/h4&gt;&lt;p&gt;这个问题出现在技术面中，当时回答的比较笼统，以下贴一个我觉得不错的&lt;/p&gt;
+&lt;p&gt;“嗯，好的，我现在还是个年轻人，还没有正式开始社会教育，所以您的问题我可能回答不好，但是在我工作的头几年，虽然我不知道我未来发展的会怎样，但是我希望尽自己最大努力配得上我的收入，还有契合我的职业精神。更加希望在工作当中获得成长，并且能在几年内详尽的做好我的职业规划。”&lt;/p&gt;
+&lt;p&gt;上面的回答也是老一辈的工作状况，工作机会难得，从底层做起，因此更加珍惜工作的机会，并且社会发展快，没时间去“想”，做比想更强，做总比不做强。&lt;/p&gt;
+&lt;h4 id="反问"&gt;反问
+&lt;/h4&gt;&lt;p&gt;团队氛围和工作环境、晋升考核、部门业务&lt;/p&gt;
+&lt;h2 id="二测评"&gt;二、测评
+&lt;/h2&gt;&lt;p&gt;现在做了十几份测评，主要是阅读理解、图表理解、图形推理、性格测试。阅读裂解和图表理解都没啥好说的，图形推理需要去学习考公的图形推理（图形推理据说来自于智商测试，但我认为这个与智商并没有关系）&lt;/p&gt;
+&lt;p&gt;性格测试需要前后一致，偏向于性格主动、有责任感、创新精神、有主见、信任团队伙伴、同事领导真诚可靠。另一类选最符合最不符合的则需要选对最符合的（按照上面的性格），并且最不符合的避开与最符合相似的答案。&lt;/p&gt;
+&lt;h2 id="三复盘"&gt;三、复盘
+&lt;/h2&gt;&lt;p&gt;首先是简历问题，现在做的内容太多是FPGA的、如果想要入行IC、需要补充更多IC的例子。其次解决问题的能力，得想想项目中的痛点，我是如何解决痛点的。然后是对项目中的性能进行优化、关注指标参数，而不能只是做了出来，需要有产品优化的意识。&lt;/p&gt;
+&lt;p&gt;其次是问题准备不够充分，上面的问题未来会在新的文章里补充。&lt;/p&gt;
+&lt;p&gt;需要补充一些高速串行、总线的知识、有的会问FPGA的硬件内容。&lt;/p&gt;</description></item><item><title>成瘾、学习、博弈、爱</title><link>https://zhaolinghao00.github.io/post/2025/08/15/%E6%88%90%E7%98%BE%E5%AD%A6%E4%B9%A0%E5%8D%9A%E5%BC%88%E7%88%B1/</link><pubDate>Fri, 15 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/15/%E6%88%90%E7%98%BE%E5%AD%A6%E4%B9%A0%E5%8D%9A%E5%BC%88%E7%88%B1/</guid><description>
+ &lt;blockquote&gt;
+ &lt;p&gt;bilibili - “大学不开的课程之：成瘾、学习、博弈与爱”&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;本文主要是记录在b站看到的一个视频，关于一个老师分享他对于大学生一些困惑的解答，包含四个方面分别是成瘾、学习、博弈和爱。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="成瘾性问题"&gt;成瘾性问题
+&lt;/h1&gt;&lt;p&gt;过去也有成瘾性问题，比如鸦片，现在的电子产品内在的算法让成瘾变得“科学、现代”，过去解决成瘾性问题会通过&lt;del&gt;鸡汤、话疗、口号&lt;/del&gt;，现在则更应该从&lt;strong&gt;脑科学&lt;/strong&gt;和&lt;strong&gt;神经科学&lt;/strong&gt;角度出发，从内解决问题。&lt;/p&gt;
+&lt;h2 id="成瘾的机制---多巴胺皮质醇内啡肽血清素与催产素"&gt;成瘾的机制 - 多巴胺、皮质醇、内啡肽、血清素与催产素。
+&lt;/h2&gt;&lt;h3 id="1-多巴胺"&gt;1. 多巴胺
+&lt;/h3&gt;&lt;p&gt;多巴胺是成瘾的主要因素，它让人感到快乐，并持续的去做同样的事情，现在的软件算法不断更新迭代从而获取你更多的注意力。&lt;/p&gt;
+&lt;p&gt;比如说微信的红点；个人会期待社会认可，更希望自己的朋友圈有人点赞和互动；自动播放与刷新；各种吃瓜、抽象的新颖性（缺乏见贤思齐）；害怕团队的离群与社交控制；社交的相互性；最主要的是&lt;strong&gt;可变的奖励模式&lt;/strong&gt;，这也是短视频、开箱、菠菜致人成瘾的主要模式，对下一次的未知让人感到期待，并在“jackpot”时候分泌大量多巴胺。&lt;/p&gt;
+&lt;p&gt;上述现象的结果就是：对多巴胺的渴望、个人行为的失控、不计后果、强迫性；&lt;/p&gt;
+&lt;h3 id="2-皮质醇压力"&gt;2. 皮质醇（压力）
+&lt;/h3&gt;
+ &lt;blockquote&gt;
+ &lt;p&gt;调查显示过去十年的女性的自杀行为增加70%，远大于男生的25%&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;在浏览朋友圈中的“光鲜”的同时感受到的“虚假的压力”，由于每个人的生活不同，这种压力没有解决的途径，进而引发焦虑（通常来说女性更容易感到这种焦虑）。&lt;/p&gt;
+&lt;p&gt;而正常的压力意味着问题可以解决，从而带来动力。&lt;/p&gt;
+&lt;h3 id="3-内啡肽血清素和催产素的治愈作用"&gt;3. 内啡肽、血清素和催产素的治愈作用
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;内啡肽：镇痛剂、镇静剂，感到痛苦时身体就会分泌内啡肽&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;正念、冥想、大小、听舒缓的音乐。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;催产素：营造温馨、幸福、与感动&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;感受爱，写&lt;strong&gt;感恩日记&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;血清素：专注、创造力、平和，在夜间转换为褪黑素，起到帮助睡眠的作用。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;创造点什么东西，当你免费使用一个东西的时候你是它的产品而不是用户（为软件提供大数据）。&lt;strong&gt;做饭、手工、写程序、弹奏，心流状态。&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;摆脱上瘾，实际就是提升内啡肽、催产素和血清素的比例，减少多巴胺和皮质醇，从而达到平和的状态。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="天才的学习方法"&gt;天才的学习方法
+&lt;/h1&gt;&lt;p&gt;如何产生记忆、高效保持记忆、提取记忆&lt;/p&gt;
+&lt;h2 id="什么是记忆"&gt;什么是记忆
+&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;鲜活记忆，瞬间&lt;/li&gt;
+&lt;li&gt;工作记忆，3-5秒，通过复述加强记忆&lt;/li&gt;
+&lt;li&gt;长期记忆
+&lt;ul&gt;
+&lt;li&gt;临时存储&lt;/li&gt;
+&lt;li&gt;永久存储&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;记忆的本质：大脑的神经元产生新的连接&lt;/p&gt;
+&lt;h2 id="产生和保持记忆"&gt;产生和保持记忆
+&lt;/h2&gt;&lt;p&gt;集中学习与间隔学习：寻求短期记忆则采用集中学习，寻求长期记忆则采用间隔学习，间隔的时间应该为需要牢记的学习时间的20%。&lt;/p&gt;
+&lt;p&gt;交错效应：交替刺激大脑不同片区的效果更好，更容易产生温故而知新和产生灵感的感觉。&lt;/p&gt;
+&lt;p&gt;生成效应：我们更容易记住自己产出的知识。&lt;/p&gt;
+&lt;p&gt;测试效应：猜测、预习，学习自己不知道的那部分知识（了解&amp;mdash;&amp;ndash;&amp;gt;兴趣）。&lt;/p&gt;
+&lt;p&gt;多媒体效应：文字、图像、声音、行动、思维的混合。&lt;/p&gt;
+&lt;h2 id="如何提取记忆"&gt;如何提取记忆
+&lt;/h2&gt;&lt;p&gt;逻辑与线索：分类、递进、因果、时间&lt;/p&gt;
+&lt;p&gt;相似的环境：触景生情&lt;/p&gt;
+&lt;p&gt;记忆提取练习（费曼学习法）：&lt;strong&gt;加工型复述&lt;/strong&gt;，能否用通俗的语言解释你学习的概念。&lt;/p&gt;
+&lt;p&gt;其他因素：动机（内在和自驱），避免分心，睡眠和运动。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="博弈论"&gt;博弈论
+&lt;/h1&gt;&lt;p&gt;首先博弈论做出的假设就是每个人都是&lt;strong&gt;绝对理性&lt;/strong&gt;和&lt;strong&gt;绝对自私&lt;/strong&gt;的，这在现实中并不可能但是能反映出人们决策时的倾向。最著名的博弈论就是《美丽心灵》主人公的原型提出的纳什均衡，即每个人都会寻求个人利益最大化而不是集体利益最大化。这就是内卷的主要原因，比较有名的例子有囚徒困境、五海盗分金。&lt;/p&gt;
+&lt;p&gt;个人觉得五海盗分金的故事还是有较大的启发性：一是清楚自己的站位，谁会为自己的付出买账；二是作为“老实人”的角色需要踏实干活，不能和“关系户”比较，不能躺平和摆烂，该有的都会有的。&lt;/p&gt;
+&lt;p&gt;通过管理、宣传可以提高个人寻求集体利益的可能性：比如奖励贡献集体的个人，舍己为人的势力等。境外势力则会反之，宣传普世价值，鼓动颜色革命。&lt;/p&gt;
+&lt;p&gt;在回顾过去的时候发现以前的人喜欢谈家国，谈情怀，那时候的集体主义扎根在大多数人的脑子里。今天则爱说年轻人是精致的利己主义，爱说人不为己天诛地灭。信息时代的交流便利促进了不同文化的融合，让年轻一代受到更多西方个人主义的影响，但是我依然相信有那么一部分人愿意放弃一部分个人利益去追求集体利益。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h1 id="爱"&gt;爱
+&lt;/h1&gt;&lt;p&gt;老师推荐了一部电影叫做《牧马人》，中国电影武有少林寺，文有牧马人。&lt;/p&gt;</description></item></channel></rss>

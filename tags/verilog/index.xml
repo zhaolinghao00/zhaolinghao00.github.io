@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Verilog on 0号树洞</title><link>https://zhaolinghao00.github.io/tags/verilog/</link><description>Recent content in Verilog on 0号树洞</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaolinghao00.github.io/tags/verilog/index.xml" rel="self" type="application/rss+xml"/><item><title>刷题（3）</title><link>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</link><pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</guid><description>&lt;p>今天做了三个笔试，记录下相关考点&lt;/p>
-&lt;h3 id="1-case的特殊用法">1. case的特殊用法&lt;/h3>
-&lt;pre>&lt;code class="language-verilog">always @(*)begin
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Verilog on 0号树洞</title><link>https://zhaolinghao00.github.io/tags/verilog/</link><description>Recent content in Verilog on 0号树洞</description><generator>Hugo -- gohugo.io</generator><language>zh-cn</language><lastBuildDate>Sat, 23 Aug 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://zhaolinghao00.github.io/tags/verilog/index.xml" rel="self" type="application/rss+xml"/><item><title>刷题（3）</title><link>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</link><pubDate>Sat, 23 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/23/%E5%88%B7%E9%A2%983/</guid><description>&lt;p&gt;今天做了三个笔试，记录下相关考点&lt;/p&gt;
+&lt;h3 id="1-case的特殊用法"&gt;1. case的特殊用法
+&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-verilog"&gt;always @(*)begin
 case(1'b1)
  s1:state 1 ;
  s2:state 2 ; 
  s3:state 3 ; 
  default：state 4 ;
 endcase
-&lt;/code>&lt;/pre>
-&lt;p>优先级编码 用的比较少，等同于&lt;/p>
-&lt;pre>&lt;code class="language-verilog">if (s1)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;优先级编码 用的比较少，等同于&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-verilog"&gt;if (s1)
  state 1;
 else if (s2)
  state 2;
@@ -17,57 +17,84 @@ else if (s3)
  state 3;
 else 
  state 4;
-&lt;/code>&lt;/pre>
-&lt;blockquote>
-&lt;p>回顾下case、casez、casex&lt;/p>
-&lt;pre>&lt;code class="language-verilog">case(expression)
+&lt;/code&gt;&lt;/pre&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;回顾下case、casez、casex&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-verilog"&gt;case(expression)
 item : statement;
-&lt;/code>&lt;/pre>
-&lt;p>当 &lt;code>item&lt;/code> 和 &lt;code>expresion&lt;/code> &lt;strong>完全&lt;/strong>匹配才会执行&lt;/p>
-&lt;pre>&lt;code class="language-verilog">casez(expression)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;当 &lt;code&gt;item&lt;/code&gt; 和 &lt;code&gt;expresion&lt;/code&gt; &lt;strong&gt;完全&lt;/strong&gt;匹配才会执行&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-verilog"&gt;casez(expression)
 item : statement;
-&lt;/code>&lt;/pre>
-&lt;p>匹配时不关心Z值&lt;/p>
-&lt;pre>&lt;code class="language-verilog">casex(expression)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;匹配时不关心Z值&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-verilog"&gt;casex(expression)
 item : statement;
-&lt;/code>&lt;/pre>
-&lt;p>匹配时不关心 x/z 的值，最好不要使用casex&lt;/p>&lt;/blockquote>
-&lt;h3 id="2-贴片电阻封装和功率">2. 贴片电阻封装和功率&lt;/h3>
-&lt;ul>
-&lt;li>封装 功率&lt;/li>
-&lt;li>0201 1/20W&lt;/li>
-&lt;li>0402 1/16W&lt;/li>
-&lt;li>0603 1/10W&lt;/li>
-&lt;li>0805 1/8W&lt;/li>
-&lt;li>1206 1/4W&lt;/li>
-&lt;/ul>
-&lt;h3 id="3-信号完整性">3. 信号完整性&lt;/h3>
-&lt;p>电源完整性和信号完整性的相互影响&lt;/p></description></item><item><title>刷题（2）</title><link>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</guid><description>&lt;p>马上要笔试了赶紧学习一下&lt;/p>
-&lt;h3 id="1-电迁移和电迁移违例electro-migration-violation">1. 电迁移和电迁移违例(Electro-Migration Violation)&lt;/h3>
-&lt;p>电迁移：电流流动引起的原子运动&lt;/p>
-&lt;p>电迁移故障用平均故障时间来描述
-&lt;/p>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;匹配时不关心 x/z 的值，最好不要使用casex&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;h3 id="2-贴片电阻封装和功率"&gt;2. 贴片电阻封装和功率
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;封装 功率&lt;/li&gt;
+&lt;li&gt;0201 1/20W&lt;/li&gt;
+&lt;li&gt;0402 1/16W&lt;/li&gt;
+&lt;li&gt;0603 1/10W&lt;/li&gt;
+&lt;li&gt;0805 1/8W&lt;/li&gt;
+&lt;li&gt;1206 1/4W&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="3-信号完整性"&gt;3. 信号完整性
+&lt;/h3&gt;&lt;p&gt;电源完整性和信号完整性的相互影响&lt;/p&gt;
+&lt;p&gt;常见阻抗标准：单端50Ω、单端75Ω、差分100Ω、90Ω。&lt;/p&gt;
+&lt;p&gt;高速信号使用介电常数低，介电损耗正切角的板材。&lt;/p&gt;
+&lt;p&gt;串联端接电路靠近&lt;strong&gt;发送端&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;峰值电流控制降压电路中次谐波震荡和谐波补偿产生边界点在于50%占空比。&lt;/p&gt;
+&lt;h3 id="4-其他"&gt;4. 其他
+&lt;/h3&gt;&lt;p&gt;106对应10和6，10代表数值、6代表后面0的个数，所以106Ω为10,000,000Ω。&lt;/p&gt;
+&lt;h3 id="5-数电"&gt;5. 数电
+&lt;/h3&gt;&lt;p&gt;通用逻辑门：NAND、NOR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;单独NAND&lt;/li&gt;
+&lt;li&gt;单独NOR&lt;/li&gt;
+&lt;li&gt;与、或、非门组合&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;可以实现任意逻辑；&lt;/p&gt;
+&lt;h3 id="6-电路分析"&gt;6 电路分析
+&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-verilog"&gt;always @(posedge clk or negedge rst_n)begin
+ if(!rst_n)begin
+ a &amp;lt;= 1'b0;
+ end
+ else if (b&amp;gt;1'b0)
+ a &amp;lt;= b;
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;b为高电平时，a才会被赋值为b -&amp;gt; 电平敏感；&lt;/p&gt;</description></item><item><title>刷题（2）</title><link>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</link><pubDate>Sun, 17 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/17/%E5%88%B7%E9%A2%982/</guid><description>&lt;p&gt;马上要笔试了赶紧学习一下&lt;/p&gt;
+&lt;h3 id="1-电迁移和电迁移违例electro-migration-violation"&gt;1. 电迁移和电迁移违例(Electro-Migration Violation)
+&lt;/h3&gt;&lt;p&gt;电迁移：电流流动引起的原子运动&lt;/p&gt;
+&lt;p&gt;电迁移故障用平均故障时间来描述
+&lt;/p&gt;
 $$
 MTTF\propto J^{-N}e^{\frac{E_a}{kT}}
-$$&lt;p>
-受到 &lt;strong>J&lt;/strong>电流密度、&lt;strong>N&lt;/strong>比例因子、&lt;strong>T&lt;/strong>温度、&lt;strong>Ea&lt;/strong>激活能影响&lt;/p>
-&lt;p>产生的原因：&lt;/p>
-&lt;ol>
-&lt;li>金属线太长，增加电阻，温度上升&lt;/li>
-&lt;li>fanout太多，大电流&lt;/li>
-&lt;li>cell驱动太强比如X16,X20，导致电流密度大&lt;/li>
-&lt;li>transition time 太快&lt;/li>
-&lt;/ol>
-&lt;p>改善措施包括：&lt;/p>
-&lt;ol>
-&lt;li>增加互联宽度，降低电流密度&lt;/li>
-&lt;li>使用具有高电迁移耐力的材料，金和铜&lt;/li>
-&lt;li>使用冗余通孔分流电流强度&lt;/li>
-&lt;li>减少互连器件之间的间距（减少互连长度）&lt;/li>
-&lt;li>设计低电压水平的电流&lt;/li>
-&lt;/ol>
-&lt;h3 id="2-运行以下程序输出的值是">2. 运行以下程序输出的值是？&lt;/h3>
-&lt;pre>&lt;code class="language-systemverilog">int addr = 32'ha;
+$$&lt;p&gt;
+受到 &lt;strong&gt;J&lt;/strong&gt;电流密度、&lt;strong&gt;N&lt;/strong&gt;比例因子、&lt;strong&gt;T&lt;/strong&gt;温度、&lt;strong&gt;Ea&lt;/strong&gt;激活能影响&lt;/p&gt;
+&lt;p&gt;产生的原因：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;金属线太长，增加电阻，温度上升&lt;/li&gt;
+&lt;li&gt;fanout太多，大电流&lt;/li&gt;
+&lt;li&gt;cell驱动太强比如X16,X20，导致电流密度大&lt;/li&gt;
+&lt;li&gt;transition time 太快&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;改善措施包括：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;增加互联宽度，降低电流密度&lt;/li&gt;
+&lt;li&gt;使用具有高电迁移耐力的材料，金和铜&lt;/li&gt;
+&lt;li&gt;使用冗余通孔分流电流强度&lt;/li&gt;
+&lt;li&gt;减少互连器件之间的间距（减少互连长度）&lt;/li&gt;
+&lt;li&gt;设计低电压水平的电流&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id="2-运行以下程序输出的值是"&gt;2. 运行以下程序输出的值是？
+&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-systemverilog"&gt;int addr = 32'ha;
 bit is_legal;
 bit [33:0] info0;
 
@@ -82,10 +109,49 @@ initial begin
  $display(&amp;quot;0x%0h&amp;quot;, info0);
 end
 endmodule
-&lt;/code>&lt;/pre>
-&lt;p>这里的关键点首先是is_legal = 1 ; is_legal = ~is_legal;&lt;/p></description></item><item><title>刷题（1）</title><link>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</guid><description>&lt;p>马上就要中期，即便如此也要坚持刷题，应对笔试。&lt;/p>
-&lt;h3 id="可以正确表述以下fork-join_any语句的是">可以正确表述以下fork join_any语句的是？&lt;/h3>
-&lt;pre>&lt;code class="language-systemverilog">begin
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;这里的关键点首先是is_legal = 1 ; is_legal = ~is_legal;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;~&lt;/code&gt;是按位操作，所以这里运行完is_legal是34’b3_ffff_fffe&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;~ 按位取反&lt;/p&gt;
+&lt;p&gt;! 逻辑非&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;其次是&lt;code&gt;{info0,0}&lt;/code&gt;这里0没有指定位宽默认为32位。这里拼接之后就是34+32 = 66 bits赋值的时候截取低32bit。&lt;/p&gt;
+&lt;h3 id="3-axi带宽分析"&gt;3. AXI带宽分析
+&lt;/h3&gt;&lt;p&gt;几个关键参数：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;绝对延时&lt;/strong&gt;：M发出命令到M收到响应的延时；&lt;strong&gt;平均延迟&lt;/strong&gt;：总传输延迟除以传输次数&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-text"&gt;发出请求-&amp;gt;传输数据(1-2-3-4-5-6-7-8)-&amp;gt;收到响应
+|----------------绝对延迟---------------&amp;gt;|
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;不同的传输过程的绝对延迟不一样。&lt;/p&gt;
+&lt;p&gt;当outstanding为3的时候，并且突发长度为8。&lt;/p&gt;
+&lt;pre&gt;&lt;code class="language-text"&gt;请求1 请求2 请求3
+	 数据1(1-2-3-4-5-6-7-8)数据2(1-2-3-4-5-6-7-8)数据3(1-2-3-4-5-6-7-8)
+ 响应1 响应2 响应3
+|--------绝对延迟1------------&amp;gt;|
+ |-----------------绝对延迟2------------------&amp;gt;|
+ 	 |--------------------------绝对延迟3--------------------------&amp;gt;|
+|---------平均延迟1-------&amp;gt;|--------平均延迟2-------&amp;gt;|------平均延迟3------&amp;gt;|
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;outstanding并没有减少单次传输&lt;code&gt;绝对延迟&lt;/code&gt;（甚至更长），但是减少了多次传输的&lt;code&gt;平均延迟&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;换句话说，由于三次传输的总时间减少，可以减少系统总线的占用，提高总线的带宽。&lt;/p&gt;
+&lt;p&gt;以上都是以写过程作为示例，下面则是通过一个读过程计算带宽。&lt;/p&gt;
+&lt;p&gt;假设系统的总线带宽：128bit=16Byte，总线时钟频率800MHz，最大突发长度16，outstanding为8，平均读延迟800ns。计算系统的平均带宽？&lt;/p&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;&lt;a class="link" href="https://zhuanlan.zhihu.com/p/720178667" target="_blank" rel="noopener"
+ &gt;参考&lt;/a&gt;中后面的平均延迟时间应该指的是单次传输的&lt;strong&gt;必要时间&lt;/strong&gt;，前面的平均时间是用来比较osd对传输速率的影响。这里我更倾向于8次osd的总延迟为800ns，也就是下面所示的过程。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;pre&gt;&lt;code class="language-tex"&gt;请求1 请求2 ... 请求7 请求8
+ 数据1（1-2...15-16）...数据8
+|------------------800ns------------------&amp;gt;|
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;所以平均带宽应该为 最大带宽×有效数据传输的占比 即12.8GBps×1.25ns×16×8/800ns = 2.56GBps&lt;/p&gt;</description></item><item><title>刷题（1）</title><link>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</link><pubDate>Sat, 16 Aug 2025 00:00:00 +0000</pubDate><guid>https://zhaolinghao00.github.io/post/2025/08/16/%E5%88%B7%E9%A2%981/</guid><description>&lt;p&gt;马上就要中期，即便如此也要坚持刷题，应对笔试。&lt;/p&gt;
+&lt;h3 id="可以正确表述以下fork-join_any语句的是"&gt;可以正确表述以下fork join_any语句的是？
+&lt;/h3&gt;&lt;pre&gt;&lt;code class="language-systemverilog"&gt;begin
  fork 
  进程a;
  进程b;
@@ -93,16 +159,19 @@ endmodule
  join_any
  	进程d;
 end
-&lt;/code>&lt;/pre>
-&lt;blockquote>
-&lt;p>fork join：必须等待进程1，进程2，进程3全部执行完毕之后，进程4才可以执行。&lt;/p>
-&lt;p>fork join_any：必须等待进程1，进程2，进程3&lt;strong>任何&lt;/strong>一个执行完毕后，进程4才可以执行&lt;/p>
-&lt;p>fork join_none：进程4是否执行不依赖于进程1，进程2，进程3，他们可以同步执行。&lt;/p>&lt;/blockquote>
-&lt;p>所以这里答案是进程abc同时启动，有一个进程结束，进程d就可以启动。&lt;/p>
-&lt;h3 id="cmos设计中动态功耗与什么有关">CMOS设计中动态功耗与什么有关&lt;/h3>
-&lt;p>动态功耗用下式表示
-&lt;/p>
+&lt;/code&gt;&lt;/pre&gt;
+
+ &lt;blockquote&gt;
+ &lt;p&gt;fork join：必须等待进程1，进程2，进程3全部执行完毕之后，进程4才可以执行。&lt;/p&gt;
+&lt;p&gt;fork join_any：必须等待进程1，进程2，进程3&lt;strong&gt;任何&lt;/strong&gt;一个执行完毕后，进程4才可以执行&lt;/p&gt;
+&lt;p&gt;fork join_none：进程4是否执行不依赖于进程1，进程2，进程3，他们可以同步执行。&lt;/p&gt;
+
+ &lt;/blockquote&gt;
+&lt;p&gt;所以这里答案是进程abc同时启动，有一个进程结束，进程d就可以启动。&lt;/p&gt;
+&lt;h3 id="cmos设计中动态功耗与什么有关"&gt;CMOS设计中动态功耗与什么有关
+&lt;/h3&gt;&lt;p&gt;动态功耗用下式表示
+&lt;/p&gt;
 $$
 P_{dyn}=C_LV_{DD}^2f_{0\rightarrow1}
-$$&lt;p>CL负载电容，VDD电源电压、f 0-&amp;gt;1开关活动性，(为啥hugo就不能支持行内公式)&lt;/p>
-&lt;p>工艺也会影响晶体管尺寸和互连电容从而改变负载电容&lt;/p></description></item></channel></rss>
+$$&lt;p&gt;CL负载电容，VDD电源电压、f 0-&amp;gt;1开关活动性，(为啥hugo就不能支持行内公式)&lt;/p&gt;
+&lt;p&gt;工艺也会影响晶体管尺寸和互连电容从而改变负载电容&lt;/p&gt;</description></item></channel></rss>
